@@ -231,11 +231,11 @@ public class MainActivity extends AppCompatActivity {
 
     private NdefMessage createNdefMessage(String content) {
 
-       // NdefRecord ndefRecord = createTextRecord(content);
-       // NdefRecord ndefRecord2 = createTextRecord(content);
+        NdefRecord ndefRecord = createTextRecord(content);
+        NdefRecord ndefRecord2 = createTextRecord(content);
 
-        NdefRecord ndefRecord = createTextRecord("Name:" + content);
-        NdefRecord ndefRecord2 = createTextRecord("ID:" + content);
+        // NdefRecord ndefRecord = createTextRecord("Name:" + content);
+        // NdefRecord ndefRecord2 = createTextRecord("ID:" + content);
 
         NdefMessage ndefMessage = new NdefMessage(new NdefRecord[]{ndefRecord, ndefRecord2});
 
