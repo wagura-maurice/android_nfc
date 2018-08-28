@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         super.onNewIntent(intent);
 
         if (intent.hasExtra(NfcAdapter.EXTRA_TAG)) {
-            Toast.makeText(this, "NfcIntent!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "NFC Intent!", Toast.LENGTH_SHORT).show();
 
             if(tglReadWrite.isChecked())
             {
@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
             NdefFormatable ndefFormatable = NdefFormatable.get(tag);
 
             if (ndefFormatable == null) {
-                Toast.makeText(this, "Tag is not ndef formatable!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Tag is not NDEF formatable!", Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -231,8 +231,8 @@ public class MainActivity extends AppCompatActivity {
 
     private NdefMessage createNdefMessage(String content) {
 
-       // NdefRecord ndefRecord = createTextRecord(content + " - record 1");
-       // NdefRecord ndefRecord2 = createTextRecord(content + " - record 2");
+       // NdefRecord ndefRecord = createTextRecord(content);
+       // NdefRecord ndefRecord2 = createTextRecord(content);
 
         NdefRecord ndefRecord = createTextRecord("Name:" + content);
         NdefRecord ndefRecord2 = createTextRecord("ID:" + content);
